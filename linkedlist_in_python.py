@@ -34,6 +34,9 @@ class LinkedList:
             
             ptr.ref = newnode
 
+    def delete_begin(self):
+        self.head = self.head.ref
+
 
 
 #limkedlist 
@@ -42,4 +45,10 @@ LL1.Insert_end(100)
 LL1.Insert_end(10)
 LL1.Insert_end(20)
 LL1.Insert_end(30)
+
+LL1.print_LL() 
+print("\n")
+
+LL1.delete_begin()
+
 LL1.print_LL()
