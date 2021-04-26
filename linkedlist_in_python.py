@@ -21,25 +21,25 @@ class LinkedList:
         newnode.ref = self.head
         self.head = newnode
 
-    def Insert_At_End(self,data):
+    def Insert_end(self,data):
         newnode = Node(data)
-        ptr = self.head
 
-        if ptr is None:
-            head = newnode
-
+        if self.head is None:
+            self.head = newnode
+        
         else:
-            while (ptr is not None):
+            ptr = self.head
+            while ptr.ref is not None:
                 ptr = ptr.ref
-                
-            ptr = newnode
+            
+            ptr.ref = newnode
 
 
 
 #limkedlist 
 LL1 = LinkedList()
-LL1.Insert_At_End(100)
-LL1.Insert_At_End(10)
-LL1.Insert_At_End(20)
-LL1.Insert_At_End(30)
+LL1.Insert_end(100)
+LL1.Insert_end(10)
+LL1.Insert_end(20)
+LL1.Insert_end(30)
 LL1.print_LL()
